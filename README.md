@@ -1,4 +1,4 @@
-# NodeJS App
+# NestJS App
 
 ## Features
 
