@@ -4,21 +4,22 @@ import { ActiveStatus } from "../enums/activeYn";
 export class CreateUserDto {
     @IsString()
     @IsNotEmpty()
-    readonly username;
+    /*readonly*/ username: string;
 
     @IsString()
     @IsOptional()
-    readonly fullname;
+    /*readonly*/ fullname: string;
 
     @IsString()
     @IsOptional()
-    readonly role;
+    /*readonly*/ role: string;
 
+    @ArrayMinSize(1)
     @IsString({ each: true })
     @IsOptional()
-    readonly projects: string[];
+    /*readonly*/ projects: string[];
 
     @IsEnum(ActiveStatus)
     @IsOptional()
-    readonly activeYn;
+    /*readonly*/ activeYn: ActiveStatus;
 }
