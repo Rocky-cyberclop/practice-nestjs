@@ -56,9 +56,6 @@ export class UserService {
       users = users.filter((user) => {
         return projects.every((item) =>
           user.projects.some((project) => {
-            // console.log('in=====');
-            // console.log(item, project.name);
-            // console.log(project.name === item);
             return project.name === item;
           }),
         );
