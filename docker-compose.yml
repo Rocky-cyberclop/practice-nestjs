@@ -14,7 +14,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   backend:
-    image: jwat-practice-backend:3.1
+    image: rockyoperation/jwat-practice-backend:3.1
     ports:
       - 3001:3009
     environment:
