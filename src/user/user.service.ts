@@ -19,7 +19,7 @@ export class UserService {
   async create(createUserDto: CreateUserDto): Promise<User> {
     const user = new User();
     user.username = createUserDto.username;
-    user.fullName = createUserDto.fullname;
+    user.fullName = createUserDto.fullName;
     user.role = createUserDto.role;
     user.activeYn = createUserDto.activeYn;
 
@@ -69,7 +69,7 @@ export class UserService {
       where: { username: username },
       relations: ['projects'],
     });
-    user.fullName = updateUserDto.fullname;
+    user.fullName = updateUserDto.fullName;
     user.role = updateUserDto.role;
     user.activeYn = updateUserDto.activeYn;
 

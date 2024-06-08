@@ -14,7 +14,7 @@ export class CreateUserDto {
 
   @IsString()
   @IsOptional()
-  readonly fullname: string;
+  readonly fullName: string;
 
   @IsString()
   @IsOptional()
