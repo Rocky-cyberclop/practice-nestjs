@@ -42,10 +42,9 @@ services:
     ports:
       - 3000:3000
     environment:
+      PORT: 3000
       NEXT_PUBLIC_SERVER_URL: http://backend:3009
-    depends_on:
-      backend:
-        condition: service_healthy
+      NEXT_PUBLIC_SERVER_URL_CLIENT_COMPONENT: http://localhost:3001
 
 volumes:
   postgres-data:
