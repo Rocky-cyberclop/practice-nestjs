@@ -1,90 +1,25 @@
-# NestJS App
+# NextJS App
 
 ## Features
 
-### Search User - Method GET
+### -Search User
 
-    localhost:3000/user/search
+### -Insert User
 
-query: {
-    username,
-    fullname,
-    role,
-    projects,
-    activeYn
-}
+### -Edit User
 
-### Example
+### -Delete User
 
-```
-localhost:3000/user/search?username=anle
-```  
+## Run this project by the command
 
-Success -> Status: 200
+Step 1: Install docker desktop
 
-### Insert User - Method POST
-
-    localhost:3000/user/insert
-
-body: {
-    username: "anle",
-    fullname: "Le Dang Hoang An",
-    role: "Developer",
-    projects: ["D&D", "Tiger"],
-    activeYn: "Y",
-}
-
-### Example
+Step 2: Use Docker Compose's command in this directory:
 
 ```
-localhost:3000/user/insert
-
-{
-    "username": "anle",
-    "fullname": "Le Dang Hoang An",
-    "role": "Developer",
-    "projects": ["D&D", "Tiger"],
-    "activeYn": "Y"
-}
+    docker-compose -f docker-compose.yml up -d
 ```
 
-Success -> Status: 201
-Error -> Status: 400
+# Watch video demo
 
-### Edit User - Method PATCH
-
-    localhost:3000/user/:username
-
-param: username
-
-body: {
-    role 'Teacher'
-}
-
-### Example
-
-```
-localhost:3000/user/anle
-
-{
-    "role": "Teacher"
-}
-```
-
-Success -> Status: 200
-Error -> Status: 400
-
-### Delete User
-
-Delete User - Method DELETE
-
-    localhost:3000/user/:username
-
-param: username
-
-```
-localhost:3000/user/anle
-```  
-
-Success -> Status: 200
-Error -> Status: 400
+https://youtu.be/lKpmlt3OWrU
