@@ -5,11 +5,16 @@ import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
 import { Project } from './project/entity/project.entity';
+import { TerminusModule } from '@nestjs/terminus';
+import { HttpModule } from '@nestjs/axios';
+import { HealthController } from './health.controller';
 require('dotenv').config();
 
 @Module({
   imports: [
     UserModule,
+    TerminusModule,
+    HttpModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
       database: process.env.DB_NAME,
@@ -21,7 +26,7 @@ require('dotenv').config();
       synchronize: true,
     }),
   ],
-  controllers: [AppController],
+  controllers: [AppController, HealthController],
   providers: [AppService],
 })
 export class AppModule {}
